@@ -1,0 +1,25 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Titles</th>
+        <th>Landmarks</th>
+    </tr>
+    <tr>
+        <td><%=@figure.name%></td>
+        <td>
+            <%@figure.titles.each do |t|%>
+                <%=t.name%>
+            <%end%>
+        </td>
+        <td>
+            <%@figure.landmarks.each do |lm|%>
+                <%=lm.name%>
+                <%=lm.year_completed%><br>
+            <%end%>
+        </td>
+    </tr>
+<table>
+
+<a class="button" href="/figures/<%=@figure.id%>/edit">Edit Figure</a> | 
+<a class="button" href="/figures">Figures</a> | 
+<a class="button" href="/">Home</a>
